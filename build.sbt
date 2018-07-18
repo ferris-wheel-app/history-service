@@ -28,7 +28,7 @@ lazy val contract = (project in file("history-rest-contract"))
 lazy val client = (project in file("history-service-client"))
   .settings(rootSettings)
   .settings(libraryDependencies += "com.ferris" %% "ferris-http-service-client" % dependencies.ferrisClientV)
-  .dependsOn(contract % "compile->compile;test->test")
+  .dependsOn(contract)
 
 
 lazy val rootSettings = {
